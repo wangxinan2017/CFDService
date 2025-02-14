@@ -1,77 +1,81 @@
-body {
-    font-family: Arial, sans-serif;
+/* 基础样式重置 */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 header p {
     font-size: 1.2em;
+    opacity: 0.8;
 }
 
+/* 特色服务区域样式 */
 .features {
-    padding: 20px;
+    padding: 40px 0;
+    background-color: #fff;
     text-align: center;
 }
 
 .features h2 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .feature-item {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .feature-item h3 {
     font-size: 1.5em;
-    color: #333;
+    color: #4CAF50;
 }
 
-.feature-item p {
-    font-size: 1em;
-    color: #666;
-}
-
+/* 定价计划区域样式 */
 .pricing {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.price-plan {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 30%;
+    padding: 40px 0;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
+.price-plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(33.33% - 40px);
+    vertical-align: top;
+}
+
 .price-plan h3 {
-    margin: 0 0 10px;
-    font-size: 1.8em;
-    color: #4CAF50;
-}
-
-.price-plan p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.price-plan .price {
     font-size: 1.5em;
     color: #4CAF50;
+}
+
+.price-plan p.price {
+    font-size: 1.2em;
+    color: #555;
     margin: 10px 0;
 }
 
@@ -82,31 +86,83 @@ header p {
 }
 
 .price-plan li {
-    font-size: 1em;
+    margin: 5px 0;
     color: #666;
-    margin-bottom: 5px;
 }
 
 .buy-button {
     background-color: #4CAF50;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px;
     font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
     background-color: #45a049;
 }
 
+/* 博文展示区域样式 */
+.blog-posts {
+    padding: 40px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.blog-posts h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.post h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.post h3 a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    text-decoration: underline;
+}
+
+.post p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* 页脚样式 */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #4CAF50;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .price-plan {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .post {
+        margin: 20px auto;
+    }
 }
